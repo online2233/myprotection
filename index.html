@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Protection | Sicherheitsdienst</title>
+
+    <meta name="description"
+          content="My Protection – Professioneller Sicherheitsdienst, Objektschutz, Veranstaltungsschutz und Empfangsdienst.">
+
+    <style>
+        /* ==============================
+           GRUNDEINSTELLUNGEN
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #222222;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #0b0b0b;
+            z-index: 1000;
+            border-bottom: 1px solid #333333;
+        }
+
+        .navbar {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #d4af37;
+        }
+
+        .menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .menu a {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #d4af37;
+        }
+
+        .menu .kontakt-button {
+            background: #d4af37;
+            color: #111111;
+            padding: 10px 18px;
+            border-radius: 4px;
+        }
+
+        .menu .kontakt-button:hover {
+            background: #ffffff;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.78),
+                    rgba(0, 0, 0, 0.78)
+                ),
+                url("https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1800&q=80");
+
+            background-size: cover;
+            background-position: center;
+            padding-top: 75px;
+        }
+
+        .hero-content {
+            max-width: 750px;
+            color: #ffffff;
+        }
+
+        .hero-small {
+            color: #d4af37;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #d4af37;
+        }
+
+        .hero p {
+            font-size: 19px;
+            color: #dddddd;
+            margin-bottom: 35px;
+            max-width: 650px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button-gold {
+            background: #d4af37;
+            color: #111111;
+        }
+
+        .button-gold:hover {
+            background: #ffffff;
+        }
+
+        .button-outline {
+            border: 1px solid #ffffff;
+            color: #ffffff;
+        }
+
+        .button-outline:hover {
+            background: #ffffff;
+            color: #111111;
+        }
+
+
+        /* ==============================
+           SECTIONS
+        ============================== */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title small {
+            color: #b28b20;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            color: #111111;
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: 15px auto 0;
+            color: #666666;
+        }
+
+
+        /* ==============================
+           LEISTUNGEN
+        ============================== */
+
+        #leistungen {
+            background: #f6f6f6;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-box {
+            background: #ffffff;
+            border: 1px solid #e3e3e3;
+            padding: 35px 30px;
+            transition: 0.3s;
+        }
+
+        .service-box:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+            border-color: #d4af37;
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            background: #111111;
+            color: #d4af37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .service-box h3 {
+            color: #111111;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .service-box p {
+            color: #666666;
+        }
+
+
+        /* ==============================
+           ÜBER UNS
+        ============================== */
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 450px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.15),
+                    rgba(0,0,0,0.15)
+                ),
+                url("https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-text small {
+            color: #b28b20;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .about-text h2 {
+            font-size: 40px;
+            margin: 10px 0 20px;
+            color: #111111;
+        }
+
+        .about-text p {
+            color: #666666;
+            margin-bottom: 18px;
+        }
+
+        .check-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .check-list li::before {
+            content: "✓";
+            color: #b28b20;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+
+        /* ==============================
+           VORTEILE
+        ============================== */
+
+        .advantages {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        .advantages .section-title h2 {
+            color: #ffffff;
+        }
+
+        .advantages .section-title p {
+            color: #bbbbbb;
+        }
+
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .advantage {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .advantage-number {
+            color: #d4af37;
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .advantage h3 {
+            margin-bottom: 10px;
+        }
+
+        .advantage p {
+            color: #bbbbbb;
+            font-size: 15px;
+        }
+
+
+        /* ==============================
+           CTA
+        ============================== */
+
+        .cta {
+            background: #d4af37;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .cta h2 {
+            font-size: 38px;
+            color: #111111;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            color: #333333;
+            margin-bottom: 25px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #111111;
+            color: #ffffff;
+            padding: 14px 28px;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #ffffff;
+            color: #111111;
+        }
+
+
+        /* ==============================
+           KONTAKT
+        ============================== */
+
+        #kontakt {
+            background: #f7f7f7;
+        }
+
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h2 {
+            font-size: 38px;
+            color: #111111;
+            margin-bottom: 20px;
+        }
+
+        .contact-info > p {
+            color: #666666;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: #111111;
+            margin-bottom: 5px;
+        }
+
+        .contact-item a {
+            color: #666666;
+        }
+
+        .contact-item a:hover {
+            color: #b28b20;
+        }
+
+        .contact-form {
+            background: #ffffff;
+            padding: 35px;
+            border: 1px solid #dddddd;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #333333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #d4af37;
+        }
+
+        .form-group textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            background: #111111;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .submit-button:hover {
+            background: #d4af37;
+            color: #111111;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            background: #080808;
+            color: #aaaaaa;
+            padding: 45px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h3 {
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: #aaaaaa;
+        }
+
+        footer a:hover {
+            color: #d4af37;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #222222;
+            margin-top: 35px;
+            padding-top: 20px;
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 900px) {
+
+            .menu {
+                gap: 15px;
+            }
+
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .advantage-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about,
+            .contact {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .navbar {
+                height: 65px;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            .menu {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 65px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 100%;
+                text-align: center;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .services,
+            .advantage-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                min-height: 320px;
+            }
+
+            .about-text h2,
+            .contact-info h2 {
+                font-size: 32px;
+            }
+
+            .contact-form {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     HEADER
+================================= -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+            My <span>Protection</span>
+        </a>
+
+        <ul class="menu">
+
+            <li>
+                <a href="#home">Startseite</a>
+            </li>
+
+            <li>
+                <a href="#leistungen">Leistungen</a>
+            </li>
+
+            <li>
+                <a href="#ueber-uns">Über uns</a>
+            </li>
+
+            <li>
+                <a href="#kontakt">Kontakt</a>
+            </li>
+
+            <li>
+                <a href="#kontakt" class="kontakt-button">
+                    Angebot
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<!-- =================================
+     HERO
+================================= -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-small">
+                My Protection
+            </div>
+
+            <h1>
+                Ihre Sicherheit.
+                <span>Unser Auftrag.</span>
+            </h1>
+
+            <p>
+                Professionelle Sicherheitsdienstleistungen für
+                Unternehmen, Objekte, Veranstaltungen und
+                private Auftraggeber.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#kontakt" class="button button-gold">
+                    Angebot anfragen
+                </a>
+
+                <a href="#leistungen" class="button button-outline">
+                    Unsere Leistungen
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     LEISTUNGEN
+================================= -->
+
+<section id="leistungen">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>Unsere Leistungen</small>
+
+            <h2>Professioneller Sicherheitsdienst</h2>
+
+            <p>
+                Individuelle Sicherheitslösungen,
+                zuverlässig und professionell.
+            </p>
+
+        </div>
+
+
+        <div class="services">
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    🛡
+                </div>
+
+                <h3>Objektschutz</h3>
+
+                <p>
+                    Schutz und Überwachung von Gebäuden,
+                    Firmengeländen und Einrichtungen.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    👤
+                </div>
+
+                <h3>Personenschutz</h3>
+
+                <p>
+                    Diskreter und professioneller Schutz
+                    für Personen und besondere Situationen.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    🏢
+                </div>
+
+                <h3>Werkschutz</h3>
+
+                <p>
+                    Sicherheitsdienst für Unternehmen,
+                    Industrieanlagen und Gewerbeobjekte.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    🚪
+                </div>
+
+                <h3>Empfangsdienst</h3>
+
+                <p>
+                    Professioneller Empfang und
+                    Sicherheitskontrolle für Unternehmen.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    🎫
+                </div>
+
+                <h3>Veranstaltungsschutz</h3>
+
+                <p>
+                    Sicherheitskräfte für Veranstaltungen,
+                    Events und besondere Anlässe.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    🚗
+                </div>
+
+                <h3>Revierdienst</h3>
+
+                <p>
+                    Kontrollfahrten und regelmäßige
+                    Überwachung Ihrer Objekte.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     ÜBER UNS
+================================= -->
+
+<section id="ueber-uns">
+
+    <div class="container">
+
+        <div class="about">
+
+
+            <div class="about-image">
+            </div>
+
+
+            <div class="about-text">
+
+                <small>Über My Protection</small>
+
+                <h2>
+                    Sicherheit schafft Vertrauen.
+                </h2>
+
+                <p>
+                    My Protection steht für zuverlässige,
+                    professionelle und verantwortungsvolle
+                    Sicherheitsdienstleistungen.
+                </p>
+
+                <p>
+                    Unser Anspruch ist es, unseren Kunden
+                    ein hohes Maß an Sicherheit und Vertrauen
+                    zu bieten.
+                </p>
+
+
+                <ul class="check-list">
+
+                    <li>
+                        Zuverlässiges Personal
+                    </li>
+
+                    <li>
+                        Professionelles Auftreten
+                    </li>
+
+                    <li>
+                        Individuelle Sicherheitslösungen
+                    </li>
+
+                    <li>
+                        Zuverlässiger Kundenservice
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     VORTEILE
+================================= -->
+
+<section class="advantages">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>Warum My Protection?</small>
+
+            <h2>Unsere Werte</h2>
+
+            <p>
+                Qualität, Zuverlässigkeit und
+                Verantwortung stehen im Mittelpunkt
+                unserer Arbeit.
+            </p>
+
+        </div>
+
+
+        <div class="advantage-grid">
+
+
+            <div class="advantage">
+
+                <div class="advantage-number">
+                    01
+                </div>
+
+                <h3>Zuverlässigkeit</h3>
+
+                <p>
+                    Wir sind zuverlässig und
+                    verantwortungsbewusst.
+                </p>
+
+            </div>
+
+
+            <div class="advantage">
+
+                <div class="advantage-number">
+                    02
+                </div>
+
+                <h3>Professionalität</h3>
+
+                <p>
+                    Seriöses Auftreten und
+                    professionelles Arbeiten.
+                </p>
+
+            </div>
+
+
+            <div class="advantage">
+
+                <div class="advantage-number">
+                    03
+                </div>
+
+                <h3>Flexibilität</h3>
+
+                <p>
+                    Individuelle Lösungen für
+                    unterschiedliche Anforderungen.
+                </p>
+
+            </div>
+
+
+            <div class="advantage">
+
+                <div class="advantage-number">
+                    04
+                </div>
+
+                <h3>Vertrauen</h3>
+
+                <p>
+                    Ihre Sicherheit und Ihr Vertrauen
+                    sind unser Anspruch.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     CTA
+================================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Sie suchen einen zuverlässigen Sicherheitsdienst?
+        </h2>
+
+        <p>
+            Kontaktieren Sie uns für ein unverbindliches Angebot.
+        </p>
+
+        <a href="#kontakt" class="cta-button">
+            Jetzt Kontakt aufnehmen
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     KONTAKT
+================================= -->
+
+<section id="kontakt">
+
+    <div class="container">
+
+        <div class="contact">
+
+
+            <div class="contact-info">
+
+                <h2>
+                    Kontakt
+                </h2>
+
+                <p>
+                    Sie haben Fragen oder benötigen
+                    einen Sicherheitsdienst?
+                    Wir freuen uns auf Ihre Anfrage.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <strong>Telefon</strong>
+
+                    <a href="tel:+491234567890">
+                        +49 123 4567890
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>E-Mail</strong>
+
+                    <a href="mailto:info@my-protection.de">
+                        info@my-protection.de
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <strong>Adresse</strong>
+
+                    <span>
+                        Ihre Straße 1<br>
+                        53111 Bonn<br>
+                        Deutschland
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- KONTAKTFORMULAR -->
+
+            <form
+                class="contact-form"
+                action="mailto:info@my-protection.de"
+                method="post"
+                enctype="text/plain"
+            >
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Name *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="Name"
+                        placeholder="Ihr Name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        E-Mail *
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="E-Mail"
+                        placeholder="Ihre E-Mail-Adresse"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="telefon">
+                        Telefon
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefon"
+                        name="Telefon"
+                        placeholder="Ihre Telefonnummer"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="nachricht">
+                        Nachricht *
+                    </label>
+
+                    <textarea
+                        id="nachricht"
+                        name="Nachricht"
+                        placeholder="Ihre Nachricht..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+                    Nachricht senden
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     FOOTER
+================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+
+            <div>
+
+                <h3>
+                    My Protection
+                </h3>
+
+                <p>
+                    Professionelle Sicherheitsdienstleistungen
+                    für Unternehmen, Objekte und Veranstaltungen.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Navigation
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#home">
+                            Startseite
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#leistungen">
+                            Leistungen
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#ueber-uns">
+                            Über uns
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#kontakt">
+                            Kontakt
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Rechtliches
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="impressum.html">
+                            Impressum
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="datenschutz.html">
+                            Datenschutz
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 My Protection –
+            Alle Rechte vorbehalten.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
